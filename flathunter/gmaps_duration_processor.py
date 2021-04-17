@@ -35,7 +35,7 @@ class GMapsDurationProcessor(Processor):
                     if 'gm_id' in mode and 'title' in mode \
                                        and 'key' in self.config.get('google_maps_api', dict()):
                         duration = self.get_gmaps_distance(address, dest, mode['gm_id'])
-                        out += "> %s (%s): %s\n" % (name, mode['title'], duration)
+                        out += "%s: %s\n" % (name, duration)
 
         return out.strip()
 

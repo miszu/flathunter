@@ -37,7 +37,7 @@ class SenderTelegram(Processor):
         if self.receiver_ids is None:
             return
         for chat_id in self.receiver_ids:
-            url = 'https://api.telegram.org/bot%s/sendMessage?chat_id=%i&text=%s'
+            url = 'https://api.telegram.org/bot%s/sendMessage?chat_id=%i&text=%s&parse_mode=markdown&disable_web_page_preview=true'
             text = urllib.parse.quote_plus(message.encode('utf-8'))
             self.__log__.debug(('token:', self.bot_token))
             self.__log__.debug(('chatid:', chat_id))

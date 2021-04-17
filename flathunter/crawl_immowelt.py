@@ -98,6 +98,6 @@ class CrawlImmowelt(Crawler):
             }
             entries.append(details)
 
-        self.__log__.debug('extracted: %d', entries)
+        #self.__log__.debug('extracted: %d', entries)
 
         return entries

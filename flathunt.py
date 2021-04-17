@@ -32,9 +32,10 @@ else:
     # else without color
     LOG_FORMAT = '[%(asctime)s|%(filename)-18s|%(levelname)-8s]: %(message)s'
 logging.basicConfig(
+    filename='log.log',
     format=LOG_FORMAT,
     datefmt='%Y/%m/%d %H:%M:%S',
-    level=logging.INFO)
+    level=logging.DEBUG)
 __log__ = logging.getLogger('flathunt')
 
 
